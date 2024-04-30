@@ -1,0 +1,28 @@
+.main{
+    /* display: flex; */
+  align-items: center;
+  margin: auto auto;
+  /* margin-top: 50px; */
+  max-width: 400px;
+  /* background-color: rgb(163, 97, 97); */
+  /* padding: 50px; */
+  border-radius: 10px;
+ 
+
+}
+.list{
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    margin: auto;
+    margin-top: 8px;
+    padding: 8px ;
+    border-radius: 10px;
+    background-color: rgb(248, 245, 245);
+    width: 100px;
+   
+  }
+  .main:hover .list{
+    display: block;
+  }

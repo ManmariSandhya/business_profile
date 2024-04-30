@@ -1,0 +1,62 @@
+.main-header{
+    background-color: #a9b0d9;
+    margin-top: 10px;
+    height: 50px;   
+    width: 99.25%;
+}
+.header-logo-image {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .header-logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .header-website-name {
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 700;
+    color: #d31812;
+  }
+.myProfile{
+    padding: 10px;
+    
+    
+}
+
+.menu{
+    list-style-type:none;
+    /* color:black;
+    background-color: #9fa5aa!important; */
+    padding: 10px;
+}
+.menu-li{
+    display: inline;
+    padding: 3%;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.sub-menu{
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: rgb(216, 228, 245);
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    font-family: sans-serif;
+    align-items: center;
+    width: 180px;
+    /* margin-top: 16px; */
+}
+.menu-li:hover .sub-menu{
+    display: block;
+    left: 0;
+}
