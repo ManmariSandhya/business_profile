@@ -71,7 +71,7 @@ function CreateProfile() {
 
     try {
       // Using Axios
-      await axios.post("http://localhost:4000/students/create-student", userForm);
+      await axios.post("http://localhost:4000/profile/create-profile", userForm);
       console.log("Data saved successfully with Axios");
       alert("Data saved successfully");
 
@@ -414,7 +414,7 @@ function CreateProfile() {
           </div>
           <br></br>
           <div>
-            <FileComponent></FileComponent>
+            {/* <FileComponent></FileComponent> */}
           </div>
           <br></br>
           <div className="mb-3">

@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { SearchComponent } from "../search/search";
 
-function EditStudent() {
+function EditProfile() {
   const [userForm, setUserForm] = useState({
     BusinessName: '',
     Email: '',
@@ -35,7 +35,7 @@ function EditStudent() {
   const onUpdate = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:4000/students/update-student/" + params.id, {
+      .put("http://localhost:4000/profile/update-profile/" + params.id, {
         BusinessName: userForm.BusinessName,
         Email: userForm.Email,
         PhoneNumber: userForm.PhoneNumber,
@@ -54,65 +54,15 @@ function EditStudent() {
       .then((res) => {
         console.log({ status: res.status });
 
-        navigate("/student-list");
+        navigate("/profile-list");
         alert("data updated successfully");
       });
 
-
-   
-      // try {
-      //     // Update student data using Axios
-      //     const updateResponse = await axios.put(`http://localhost:4000/students/update-student/${params.id}`, {
-      //         BusinessName: userForm.BusinessName,
-      //         Email: userForm.Email,
-      //         PhoneNumber: userForm.PhoneNumber,
-      //         AdharNumber: userForm.AdharNumber,
-      //         Disability: userForm.Disability,
-      //         City: userForm.City,
-      //         State: userForm.State,
-      //         Country: userForm.Country,
-      //         BusinessDetails: userForm.BusinessDetails,
-      //         BusinessCategory: userForm.BusinessCategory,
-      //         Timings: userForm.Timings,
-      //         WebsiteURL: userForm.WebsiteURL,
-      //     });
-  
-      //     if (updateResponse.status !== 200) {
-      //         throw new Error('Failed to update student data');
-      //     }
-  
-      //     // Send email registration request using Fetch API
-      //     const emailResponse = await fetch("http://localhost:4000/register", {
-      //         method: "POST",
-      //         headers: {
-      //             "Content-Type": "application/json"
-      //         },
-      //         body: JSON.stringify({
-      //             email: userForm.Email
-      //         })
-      //     });
-  
-      //     if (!emailResponse.ok) {
-      //         throw new Error('Failed to send email');
-      //     }
-  
-      //     // Handle the response data here if needed
-      //     const emailData = await emailResponse.json();
-      //     console.log(emailData);
-      //     navigate("/student-list");
-      //     // Display success message
-      //     alert("Student data updated successfully and email sent successfully");
-      // } catch (error) {
-      //     console.error('Error:', error.message);
-      //     alert("An error occurred. Please try again later.");
-      // }
-  
-  
   };
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/students/get-student/" + params.id)
+      .get("http://localhost:4000/profile/get-profile/" + params.id)
       .then((res) => {
         setUserForm({
           BusinessName: res.data.data.BusinessName,
@@ -290,30 +240,7 @@ function EditStudent() {
               onChange={inputsHandler}
             />
           </div>
-          {/* <div className="row">
-            <div className="col-6 mt-0 ml-0">
-              <label className="form-label"><b>Business Category</b></label>
-              <SearchComponent></SearchComponent>
-            </div>
-            <div className="col-6 mt-5">
-              <div className="mb-3">
-                <label className="form-label"><b>Business Category</b>&nbsp;<StarFill style={{ fontSize: '8px', color: 'orangered' }}></StarFill></label>
-                <select type="text"
-
-                  className="form-control"
-                  name="BusinessCategory"
-                  id="BusinessCategory"
-                  value={userForm.BusinessCategory}
-                  onChange={inputsHandler} >
-                  <option >---Select Category ---</option>
-                  <option>Plumber</option>
-                  <option>Mechanic</option>
-                  <option>Beuty</option>
-                  <option>Carpenter</option>
-                </select>
-               </div>
-            </div>
-          </div> */}
+         
           <div className="mb-3">
             <label className="form-label"><b>Timings</b>&nbsp;</label>
 
@@ -355,4 +282,4 @@ function EditStudent() {
   );
 }
 
-export default EditStudent;
+export default EditProfile;

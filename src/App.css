@@ -1,19 +1,61 @@
 
-.wrapper {
-  /* max-width: 700px; */
-  /* margin: 0 auto; */
+/* .wrapper {
+
 
 }
 .form-wrapper{
-  /* margin: auto; */
+
   margin-left: 160px;
   width: 900px;
   
 }
 .table{
   margin-left: -130px;
- /* text-indent: -12px; */
+
  
+} */
+
+/* Default styles */
+.wrapper {
+  /* Add your default wrapper styles here */
+ 
+ 
+}
+
+.form-wrapper {
+  margin-left: 160px;
+  width: 900px;
+}
+
+.table {
+ 
+} 
+
+/* Responsive styles for smaller devices */
+@media only screen and (max-width: 1200px) {
+  .form-wrapper {
+    margin-left: 100px; /* Adjust margin for smaller screens */
+    width: 700px; /* Adjust width for smaller screens */
+  }
+
+  .table {
+    margin-left: -80px;
+    width: 500px;
+  }
+}
+
+/* Responsive styles for even smaller devices */
+@media only screen and (max-width: 992px) {
+  .form-wrapper {
+    margin-left: 20px; /* Adjust margin for smaller screens */
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .table {
+    margin-left: 0; 
+    width: 300px;
+    
+  }
 }
 
 

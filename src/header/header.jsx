@@ -20,18 +20,16 @@ export function Header() {
                     <div className='col-4'></div>
 
 
-                    {/* <div className='col-4 myProfile'><Link to="/my_profile" style={{ textDecoration: 'none', color: 'white' }}>My Profile </Link></div> */}
-
-                    {/* <div className='col-4 myProfile'><Link to="/choose_file" style={{ textDecoration: 'none', color: 'white' }}>My Profile </Link></div> */}
+                    
                     <div className='col-4'>
                         <ul className='menu' >
                             <li className='menu-li'>My Profile
                                 <ul className='sub-menu'>
-                                    <Link to={"/create-student"} className="nav-link">
+                                    <Link to={"/create-profile"} className="nav-link">
                                         <li>Create New Profile</li>
                                     </Link>
                                     <br></br>
-                                    <Link to={"/student-list"} className="nav-link">
+                                    <Link to={"/profile-list"} className="nav-link">
                                         <li>Edit Profile
                                         </li>
                                     </Link>
@@ -44,3 +42,7 @@ export function Header() {
         </div>
     )
 }
+
+
+
+

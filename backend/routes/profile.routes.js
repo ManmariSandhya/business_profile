@@ -5,12 +5,12 @@ let mongoose = require("mongoose"),
 
 
 // Student Model
-let studentSchema = require("../Models/Student");
+let studentSchema = require("../Models/Profile");
 
 
 
 // CREATE Student
-router.route("/create-student").post(async (req, res, next) => {
+router.route("/create-profile").post(async (req, res, next) => {
   await studentSchema
     .create(req.body)
     .then((result) => {
@@ -46,7 +46,7 @@ router.route("/").get(async (req, res, next) => {
 });
 
 // Get Single Student
-router.route("/get-student/:id").get(async (req, res, next) => {
+router.route("/get-profile/:id").get(async (req, res, next) => {
   await studentSchema
     .findById(req.params.id)
     .then((result) => {
@@ -62,7 +62,7 @@ router.route("/get-student/:id").get(async (req, res, next) => {
 });
 
 // Update Student
-router.route("/update-student/:id").put(async (req, res, next) => {
+router.route("/update-profile/:id").put(async (req, res, next) => {
   await studentSchema
     .findByIdAndUpdate(req.params.id, {
       $set: req.body,
@@ -80,7 +80,7 @@ router.route("/update-student/:id").put(async (req, res, next) => {
 });
 
 // Delete Student
-router.route("/delete-student/:id").delete(async (req, res, next) => {
+router.route("/delete-profile/:id").delete(async (req, res, next) => {
   await studentSchema
     .findByIdAndRemove(req.params.id)
     .then(() => {

@@ -43,7 +43,7 @@ let studentSchema = new Schema({
   },
  
 }, {
-    collection: 'studentsProfiles'
+    collection: 'businessProfiles'
   })
 
 module.exports = mongoose.model('Student', studentSchema)

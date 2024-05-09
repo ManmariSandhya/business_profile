@@ -7,7 +7,7 @@ const path = require("path")
 let router = require("./routes/router");
 let reviewSchema = require("./Models/review");
 // Express Route
-const studentRoute = require("./routes/student.routes");
+const studentRoute = require("./routes/profile.routes");
 // const multer = require("multer");
 
 // Connecting mongoDB Database
@@ -31,7 +31,7 @@ app.use(
 );
 app.use(cors());
 app.use(express.json())
-app.use("/students", studentRoute);
+app.use("/profile", studentRoute);
 app.use(router);
 
 

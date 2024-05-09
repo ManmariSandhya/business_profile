@@ -21,7 +21,7 @@
     font-family: cursive;
     font-size: 20px;
     font-weight: 700;
-    color: #d31812;
+    color: #f12b25;
   }
 .myProfile{
     padding: 10px;
@@ -31,8 +31,7 @@
 
 .menu{
     list-style-type:none;
-    /* color:black;
-    background-color: #9fa5aa!important; */
+    
     padding: 10px;
 }
 .menu-li{
@@ -51,12 +50,18 @@
     color: black;
     padding: 20px;
     margin: 10px;
+    margin-right: 10px;
+  
     font-family: sans-serif;
     align-items: center;
-    width: 180px;
-    /* margin-top: 16px; */
+    width: 150px;
+    
 }
 .menu-li:hover .sub-menu{
     display: block;
     left: 0;
 }
+
+
+
+
